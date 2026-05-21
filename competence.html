@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Compétences Techniques - Portfolio - Gabin LEFORESTIER SIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Barre de navigation -->
+     <nav>
+        <a href="index.html">Accueil</a>
+        <a href="competence.html">Compétences techniques</a>
+        <a href="projets.html">Projets</a>
+        <a href="tableau.html">Tableau de compétences</a> 
+     </nav>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Compétences - Gabin LEFORESTIER | BTS SIO SLAM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Canvas pour l'animation de fond -->
+    <canvas id="cyberCanvas"></canvas>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="competence.html">COMPÉTENCES</a>
+        <a href="projets.html">PROJETS</a>
+        <a href="tableau.html">TABLEAU</a>
+    </nav>
+
+    <!-- ========== SECTION HERO COMPÉTENCES ========== -->
+    <section class="hero competences-hero">
+        <div class="hero-content">
+            <div class="glow-ring"></div>
+            <div class="hero-badge">
+                <span class="badge-text">
+                    <i class="fas fa-microchip"></i> // TECH_STACK_ANALYSIS
+                </span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">ARME</span>
+                <span class="title-line glitch-text" data-text="TECHNIQUE">TECHNIQUE</span>
+            </h1>
+            <div class="hero-subtitle">
+                <p class="sub-badge">▸ INVENTAIRE_COMPLET_DES_COMPÉTENCES</p>
+            </div>
+            <p class="hero-description">
+                [<span class="cmd">root@dev</span>:~<span class="cmd">$</span>] <span class="cmd-text">cat competences.list | --verbose</span>
+            </p>
+            <div class="tech-stack">
+                <div class="tech-item">C</div>
+                <div class="tech-item">ASM x86</div>
+                <div class="tech-item">C#</div>
+                <div class="tech-item">PYTHON</div>
+                <div class="tech-item">SQL</div>
+                <div class="tech-item">PHP</div>
+                <div class="tech-item">HTML/CSS</div>
+                <div class="tech-item">RÉSEAU</div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>// SCROLL_TO_EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- ========== SECTION COMPÉTENCES DÉTAILLÉES ========== -->
+    <section class="skills-detailed">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ COMPETENCES.MATRIX</span>
+                <h2 class="section-title">CLASSIFICATION <span class="title-accent">SYSTÈME</span></h2>
+            </div>
+
+            <!-- BAS NIVEAU -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="category-title">BAS NIVEAU & SYSTÈME</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="skills-detailed-grid">
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fas fa-c"></i>
+                                <span>Langage C</span>
+                            </div>
+                        </div>
+                        <p class="skill-description">Pointeurs, gestion mémoire allouée, structures, fichiers, appels système. Développement d'outils bas niveau et exploration du noyau.</p>
+                        <div class="skill-tags">
+                            <span>Gestion mémoire</span>
+                            <span>Pointeurs</span>
+                            <span>System calls</span>
+                            <span>Structures</span>
+                        </div>
+                        <div class="skill-badge-autodidact">AUTODIDACTE</div>
+                    </div>
+
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fas fa-microchip"></i>
+                                <span>Assembleur x86</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">MAÎTRISE INTERMÉDIAIRE</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar"></span><span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Registres, interruptions, pile, bootloader, mode protégé. Création d'un OS 32-bit fonctionnel.</p>
+                        <div class="skill-tags">
+                            <span>Registres</span>
+                            <span>Interruptions</span>
+                            <span>Bootloader</span>
+                            <span>Mode protégé</span>
+                        </div>
+                        <div class="skill-badge-autodidact">AUTODIDACTE</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LANGAGES APPLICATIFS -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="category-title">LANGAGES APPLICATIFS</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="skills-detailed-grid three-cols">
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fab fa-microsoft"></i>
+                                <span>C# / .NET</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">MAÎTRISE CONFIRMÉE</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Développement d'applications Windows avec Visual Studio 2022, WinForms, connexion BDD, architecture N-tier.</p>
+                        <div class="skill-tags">
+                            <span>.NET Framework</span>
+                            <span>WinForms</span>
+                            <span>ADO.NET</span>
+                            <span>LINQ</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">INTERMÉDIAIRE</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Boucles while et for, conditions...</p>
+                        <div class="skill-tags">
+                            <span>Scripting</span>
+                            <span>Flask</span>
+                            <span>Automatisation</span>
+                            <span>Requests</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">MAÎTRISE INTERMÉDIAIRE</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar"></span><span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Développement back-end, architecture MVC, gestion de sessions, connexion aux bases de données.</p>
+                        <div class="skill-tags">
+                            <span>MVC</span>
+                            <span>PDO</span>
+                            <span>Sessions</span>
+                            <span>API REST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BASE DE DONNÉES & WEB -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="category-title">BASE DE DONNÉES & WEB</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="skills-detailed-grid two-cols">
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">MAITRISE BASIQUE</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Requêtes complexes, jointures, sous-requêtes, optimisation, modélisation de bases de données relationnelles.</p>
+                        <div class="skill-tags">
+                            <span>MySQL</span>
+                            <span>PostgreSQL</span>
+                            <span>Jointures</span>
+                            <span>Optimisation</span>
+                            <span>Modélisation</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-detailed-card">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5 / CSS3</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">MAÎTRISE CONFIRMÉE</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Design responsive, Flexbox/Grid, intégration de maquettes, accessibilité.</p>
+                        <div class="skill-tags">
+                            <span>Flexbox</span>
+                            <span>Grid</span>
+                            <span>Animations</span>
+                            <span>Responsive</span>
+                            <span>Variables CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RÉSEAU & INFRASTRUCTURE -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="category-title">RÉSEAU & INFRASTRUCTURE</h3>
+                    <div class="category-line"></div>
+                </div>
+                <div class="skills-detailed-grid full-width-grid">
+                    <div class="skill-detailed-card full-width">
+                        <div class="skill-header">
+                            <div class="skill-name">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Réseaux Informatiques</span>
+                            </div>
+                            <div class="skill-level-indicator">
+                                <span class="level-text">BASES SOLIDES</span>
+                                <div class="level-bars">
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar active"></span>
+                                    <span class="bar active"></span><span class="bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="skill-description">Architecture TCP/IP, routage, VLAN, sécurité réseau, administration système, services réseau (DNS, DHCP, HTTP).</p>
+                        <div class="skill-tags">
+                            <span>TCP/IP</span>
+                            <span>Routage</span>
+                            <span>VLAN</span>
+                            <span>DNS/DHCP</span>
+                            <span>Sécurité</span>
+                            <span>Wireshark</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION OUTILS & ENVIRONNEMENT ========== -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ DEV_ENVIRONMENT</span>
+                <h2 class="section-title">ARsenal <span class="title-accent">Développeur</span></h2>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <i class="fab fa-windows"></i>
+                    <span>Visual Studio 2022</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fab fa-linux"></i>
+                    <span>Linux / Ubuntu</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-code"></i>
+                    <span>VS Code</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git / GitHub</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-terminal"></i>
+                    <span>Bash / PowerShell</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-database"></i>
+                    <span>MySQL Workbench</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-microchip"></i>
+                    <span>QEMU / Bochs</span>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Wireshark</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION CERTIFICATIONS ========== -->
+    <section class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ CERTIFICATIONS</span>
+                <h2 class="section-title">VALIDATIONS <span class="title-accent">TECHNIQUES</span></h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Autoformation C / Assembleur</h3>
+                        <p>Parcours autodidacte approfondi sur les langages bas niveau et l'architecture système.</p>
+                        <span class="cert-status">EN COURS</span>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Bases du Réseau</h3>
+                        <p>Formation solide acquise en BTS SIO sur les architectures et protocoles réseau.</p>
+                        <span class="cert-status">VALIDÉ</span>
+                    </div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>SQL Avancé</h3>
+                        <p>Maîtrise des requêtes complexes, optimisation et modélisation de bases de données.</p>
+                        <span class="cert-status">VALIDÉ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="glitch-small">&lt;G.L/&gt;</span>
+                </div>
+                <p class="footer-text">© 2025 GABIN LEFORESTIER · BTS SIO SLAM · SPÉCIALITÉ DÉVELOPPEMENT SYSTÈME</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+</body>
+</html>

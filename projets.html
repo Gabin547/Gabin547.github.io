@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projets - Gabin LEFORESTIER | BTS SIO SLAM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Canvas pour l'animation de fond -->
+    <canvas id="cyberCanvas"></canvas>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="competence.html">Compétences techniques</a>
+        <a href="projets.html">Projets</a>
+        <a href="tableau.html">Tableau de compétences</a> 
+     </nav>
+
+    <!-- ========== SECTION HERO PROJETS ========== -->
+    <section class="hero projets-hero">
+        <div class="hero-content">
+            <div class="glow-ring"></div>
+            <div class="hero-badge">
+                <span class="badge-text">
+                    <i class="fas fa-cube"></i> // PORTFOLIO_PROJECTS
+                </span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">RÉALISATIONS</span>
+                <span class="title-line glitch-text" data-text="FLAGSHIP">FLAGSHIP</span>
+            </h1>
+            <div class="hero-subtitle">
+                <p class="sub-badge">▸ INVENTAIRE_COMPLET_DES_PROJETS</p>
+            </div>
+            <p class="hero-description">
+                [<span class="cmd">root@dev</span>:~<span class="cmd">$</span>] <span class="cmd-text">ls -la /projects/ --showcase</span>
+            </p>
+            <div class="project-stats-hero">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">4</span>
+                    <span class="hero-stat-label">PROJETS</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">100%</span>
+                    <span class="hero-stat-label">FONCTIONNELS</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>// SCROLL_TO_EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- ========== SECTION PROJETS ========== -->
+    <section class="all-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ PROJECTS.LIST</span>
+                <h2 class="section-title">CATALOGUE <span class="title-accent">COMPLET</span></h2>
+            </div>
+
+            <!-- PROJET MAJEUR - OS 32-bit avec GDT -->
+            <div class="project-major">
+                <div class="project-major-badge">PROJET MAJEUR · TERMINÉ</div>
+                <div class="project-major-content">
+                    <div class="project-major-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="project-major-info">
+                        <h3>OS 32-bit · GDT</h3>
+                        <p class="project-major-desc">Système d'exploitation minimal en 32 bits avec implémentation complète de la GDT (Global Descriptor Table). Développé en assembleur et C, gestion du mode protégé, segmentation mémoire et affichage texte. Ce projet représente l'aboutissement de mon apprentissage autodidacte des langages bas niveau et de l'architecture système.</p>
+                        <div class="project-major-tech">
+                            <span>C</span>
+                            <span>Assembleur x86</span>
+                            <span>GDT</span>
+                            <span>Mode protégé</span>
+                            <span>QEMU</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GRILLE DES AUTRES PROJETS -->
+            <div class="projects-all-grid">
+                
+                <!-- Projet 1 : Site Web Hypnotérapeute -->
+                <div class="project-card-detailed">
+                    <div class="project-card-header">
+                        <div class="project-icon-large">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="project-status-badge">TERMINÉ</div>
+                    </div>
+                    <h3>Site Web · Hypnotérapeute</h3>
+                    <p>Site vitrine professionnel pour un hypnotérapeute. Présentation des services, formulaire de contact, prise de rendez-vous en ligne, design épuré et responsive.</p>
+                    <div class="project-tech-list">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check"></i> Formulaire de contact</div>
+                        <div class="feature"><i class="fas fa-check"></i> Prise de RDV en ligne</div>
+                        <div class="feature"><i class="fas fa-check"></i> Design responsive</div>
+                    </div>
+                   
+                </div>
+
+                <!-- Projet 2 : Site Web Cinéma Pathé Mâcon -->
+                <div class="project-card-detailed">
+                    <div class="project-card-header">
+                        <div class="project-icon-large">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="project-status-badge">TERMINÉ</div>
+                    </div>
+                    <h3>Site Web · Pathé Mâcon</h3>
+                    <p>Site web complet pour le cinéma Pathé de Mâcon. Catalogue des films, horaires des séances, réservation en ligne, espace membre, back-office administrateur.</p>
+                    <div class="project-tech-list">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check"></i> Catalogue films</div>
+                        <div class="feature"><i class="fas fa-check"></i> Réservation en ligne</div>
+                        <div class="feature"><i class="fas fa-check"></i> Back-office admin</div>
+                        <div class="feature"><i class="fas fa-check"></i> Espace membre</div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 : Application C# Cinéma Pathé Mâcon -->
+                <div class="project-card-detailed">
+                    <div class="project-card-header">
+                        <div class="project-icon-large">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="project-status-badge">TERMINÉ</div>
+                    </div>
+                    <h3>Application C# · Pathé Mâcon</h3>
+                    <p>Application de gestion pour le cinéma Pathé Mâcon développée avec Visual Studio 2022 et reliée à une base de données SQL. Gestion des séances, vente de billets, gestion des stocks, reporting et génération de statistiques.</p>
+                    <div class="project-tech-list">
+                        <span>C#</span>
+                        <span>.NET</span>
+                        <span>SQL Server</span>
+                        <span>WinForms</span>
+                        <span>Report Viewer</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-check"></i> Gestion des séances</div>
+                        <div class="feature"><i class="fas fa-check"></i> Vente de billets</div>
+                        <div class="feature"><i class="fas fa-check"></i> Gestion des stocks</div>
+                        <div class="feature"><i class="fas fa-check"></i> Statistiques</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="glitch-small">&lt;G.L/&gt;</span>
+                </div>
+                <p class="footer-text">© 2025 GABIN LEFORESTIER · BTS SIO SLAM · SPÉCIALITÉ DÉVELOPPEMENT SYSTÈME</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
