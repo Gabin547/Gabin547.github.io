@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Gabin LEFORESTIER | Développeur Système - Portfolio BTS SIO</title>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Gabin LEFORESTIER | Développeur Bas Niveau - Portfolio BTS SIO</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,16 +20,30 @@
         <a href="index.html">ACCUEIL</a>
         <a href="competence.html">COMPÉTENCES</a>
         <a href="projets.html">PROJETS</a>
-        <a href="tableau.html">TABLEAU</a>
+        <div class="dropdown">
+            <a href="contexte.html" class="dropdown-toggle">CONTEXTE</a>
+            <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
+            <div class="dropdown-menu">
+                <a href="contexte.html#contexte-pro-1">
+                    <i class="fas fa-circle"></i> Contexte Pro 1 · 1ère année
+                </a>
+                <a href="contexte.html#contexte-pro-2">
+                    <i class="fas fa-circle"></i> Contexte Pro 2 · 2ème année
+                </a>
+                <a href="contexte.html#contexte-pro-3">
+                    <i class="fas fa-circle"></i> Contexte Pro 3 · Stage Avizeo
+                </a>
+            </div>
+        </div>
     </nav>
 
-    <!-- SECTION HERO -->
+    <!-- ========== SECTION HERO ========== -->
     <section class="hero">
         <div class="hero-content">
             <div class="glow-ring"></div>
             <div class="hero-badge">
                 <span class="badge-text">
-                    <i class="fas fa-microchip"></i> BTS SIO SLAM · 1ÈRE ANNÉE
+                    <i class="fas fa-shield-halved"></i> BTS SIO SLAM · 2ÈME ANNÉE
                 </span>
             </div>
             <h1 class="hero-title">
@@ -38,12 +52,12 @@
             </h1>
             <div class="hero-subtitle">
                 <div class="typewriter">
-                    <span class="static-text">Développeur Système & Bas Niveau</span>
+                    <span class="static-text">Développeur Bas Niveau & Cryptologie</span>
                 </div>
-                <p class="sub-badge">▸ SPÉCIALITÉ : DRIVERS & NOYAU</p>
+                <p class="sub-badge">▸ SPÉCIALITÉ : SYSTÈMES · SÉCURITÉ · CHIFFREMENT</p>
             </div>
             <p class="hero-description">
-                [<span class="cmd">root@dev</span>:~<span class="cmd">$</span>] <span class="cmd-text">./construire_les_fondations_du_numérique</span>
+                [<span class="cmd">root@dev</span>:~<span class="cmd">$</span>] <span class="cmd-text">./construire_les_fondations_du_numérique --secure</span>
             </p>
             <div class="hero-buttons">
                 <a href="projets.html" class="btn btn-primary">
@@ -51,9 +65,13 @@
                     <span>EXPLORER LES PROJETS</span>
                     <i class="fas fa-arrow-right arrow-icon"></i>
                 </a>
-                <a href="#skills" class="btn btn-outline">
-                    <i class="fas fa-terminal"></i>
-                    <span>DÉCOUVRIR MON STACK</span>
+                <button class="btn btn-outline" id="showCvBtn">
+                    <i class="fas fa-file-alt"></i>
+                    <span>VOIR LE CV</span>
+                </button>
+                <a href="Gabin_LEFORESTIER.pdf" download class="btn btn-outline">
+                    <i class="fas fa-download"></i>
+                    <span>TÉLÉCHARGER LE CV</span>
                 </a>
             </div>
             <div class="tech-stack">
@@ -63,7 +81,7 @@
                 <div class="tech-item">PYTHON</div>
                 <div class="tech-item">SQL</div>
                 <div class="tech-item">PHP</div>
-                <div class="tech-item">RÉSEAU</div>
+                <div class="tech-item">CRYPTOGRAPHIE</div>
             </div>
         </div>
         <div class="hero-scroll">
@@ -72,178 +90,245 @@
         </div>
     </section>
 
-    <!-- SECTION À PROPOS -->
-    <section class="about" id="about">
+    <!-- ========== SECTION CV (cachée par défaut) ========== -->
+    <section class="cv-section" id="cvSection" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ RESUME</span>
+                <h2 class="section-title">MON <span class="title-accent">CV</span></h2>
+            </div>
+            <div class="cv-container">
+                <div class="cv-buttons">
+                    <button class="cv-close-btn" id="closeCvBtn">
+                        <i class="fas fa-times"></i> MASQUER
+                    </button>
+                    <a href="Gabin LEFORESTIER.pdf" download class="cv-download-btn">
+                        <i class="fas fa-download"></i> TÉLÉCHARGER
+                    </a>
+                </div>
+                <iframe src="Gabin LEFORESTIER.pdf" class="cv-iframe"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION IDENTITÉ PROFESSIONNELLE ========== -->
+    <section class="identity" id="identity">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">>_ IDENTITY</span>
-                <h2 class="section-title">PROFIL <span class="title-accent">SYSTÈME</span></h2>
+                <h2 class="section-title">IDENTITÉ <span class="title-accent">PROFESSIONNELLE</span></h2>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="code-block">
-                        <div class="code-header">
-                            <span class="code-dot red"></span>
-                            <span class="code-dot yellow"></span>
-                            <span class="code-dot green"></span>
-                            <span class="code-path">~/about.me</span>
-                        </div>
-                        <div class="code-body">
-                            <p><span class="code-keyword">const</span> <span class="code-var">developer</span> = {</p>
-                            <p class="code-line">  name: <span class="code-string">"Gabin LEFORESTIER"</span>,</p>
-                            <p class="code-line">  status: <span class="code-string">"BTS SIO SLAM - 1ère année"</span>,</p>
-                            <p class="code-line">  passion: <span class="code-string">"Développement système & drivers"</span>,</p>
-                            <p class="code-line">  autodidact: [<span class="code-string">"C"</span>, <span class="code-string">"Assembleur x86"</span>],</p>
-                            <p class="code-line">  goal: <span class="code-string">"Construire les fondations du numérique"</span></p>
-                            <p>};</p>
-                        </div>
+
+            <div class="identity-grid">
+                <!-- Carte profil -->
+                <div class="identity-card main-card">
+                    <div class="identity-avatar">
+                        <i class="fas fa-user-secret"></i>
                     </div>
-                    <div class="about-description">
-                        <p>Passionné par les entrailles du système, j'explore les couches basses où s'écrit l'essence même de l'informatique. Du <strong>C</strong> à l'<strong>assembleur</strong>, en passant par la création d'un <strong>OS 32-bit avec GDT</strong>, je forge les fondations sur lesquelles repose le monde numérique.</p>
-                        <p class="highlight-quote">"Comprendre le hardware pour maîtriser le software"</p>
+                    <h3>Gabin LEFORESTIER</h3>
+                    <p class="identity-role">Étudiant BTS SIO SLAM · 2ème année</p>
+                    <p class="identity-quote">"Comprendre le hardware pour maîtriser le software, sécuriser les fondations du numérique."</p>
+                    <div class="identity-info">
+                        <div class="info-line">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Macon (71000)</span>
+                        </div>
+                        <div class="info-line">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO SLAM · 2025 - 2027</span>
+                        </div>
+                        <div class="info-line">
+                            <i class="fas fa-envelope"></i>
+                            <span>gabinleforestier3@gmail.com</span>
+                        </div>
                     </div>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-microchip"></i></div>
-                        <div class="stat-number">6</div>
-                        <div class="stat-label">LANGAGES MAÎTRISÉS</div>
-                        <div class="stat-line"></div>
+
+                <!-- Carte orientation -->
+                <div class="identity-card orientation-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-halved"></i>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-crown"></i></div>
-                        <div class="stat-number">2</div>
-                        <div class="stat-label">BAS NIVEAU</div>
-                        <div class="stat-line"></div>
+                    <h3>ORIENTATION PROFESSIONNELLE</h3>
+                    <div class="orientation-target">
+                        <div class="target-label">OBJECTIF</div>
+                        <div class="target-value">Cryptologie</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-desktop"></i></div>
-                        <div class="stat-number">1</div>
-                        <div class="stat-label">OS CRÉÉ</div>
-                        <div class="stat-line"></div>
+                    <div class="orientation-target">
+                        <div class="target-label">SPÉCIALITÉ</div>
+                        <div class="target-value">Développeur Bas Niveau en Cryptologie</div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon"><i class="fas fa-network-wired"></i></div>
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">BASES RÉSEAU</div>
-                        <div class="stat-line"></div>
+                    <p class="orientation-desc">
+                        Passionné par la sécurité informatique et les mécanismes de chiffrement, 
+                        je souhaite concevoir des systèmes sécurisés au plus proche de la machine : 
+                        algorithmes cryptographiques, implémentations bas niveau et optimisation matérielle.
+                    </p>
+                    <div class="orientation-tags">
+                        <span>Cryptographie</span>
+                        <span>Sécurité</span>
+                        <span>Bas niveau</span>
+                        <span>Drivers</span>
+                        <span>Noyau</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION COMPÉTENCES -->
-    <section class="skills" id="skills">
+    <!-- ========== SECTION FORMATIONS ========== -->
+    <section class="formations" id="formations">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">>_ TECH_STACK</span>
-                <h2 class="section-title">ARME <span class="title-accent">TECHNIQUE</span></h2>
+                <span class="section-tag">>_ EDUCATION</span>
+                <h2 class="section-title">MES <span class="title-accent">FORMATIONS</span></h2>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>BAS NIVEAU</h3>
-                    <div class="skill-list">
-                        <span class="skill-pill">C</span>
-                        <span class="skill-pill">Assembleur x86</span>
-                        <span class="skill-pill skill-badge">Autodidacte</span>
+
+            <div class="timeline">
+                <!-- Formation 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025 - 2027</div>
+                        <h3>BTS SIO option SLAM</h3>
+                        <p class="timeline-subtitle">Solutions Logicielles et Applications Métiers</p>
+                        <p class="timeline-place">
+                            <i class="fas fa-map-marker-alt"></i> Lycée Lamartine · Mâcon
+                        </p>
+                        <p class="timeline-desc">
+                            Formation en développement logiciel : conception d'applications, 
+                            gestion de bases de données, développement web et mobile, 
+                            cybersécurité et gestion de projet.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Développement</span>
+                            <span>Cybersécurité</span>
+                        </div>
                     </div>
-                    <p>Pointeurs, gestion mémoire, registres, interruptions, bootloader, GDT</p>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>APPLICATIF</h3>
-                    <div class="skill-list">
-                        <span class="skill-pill">C#</span>
-                        <span class="skill-pill">Python</span>
-                        <span class="skill-pill">PHP</span>
+
+                <!-- Formation 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2025</div>
+                        <h3>Baccalauréat Professionnel Systèmes Numériques</h3>
+                        <p class="timeline-subtitle">Option C : Réseaux Informatiques et Systèmes Communicants</p>
+                        <p class="timeline-place">
+                            <i class="fas fa-map-marker-alt"></i> Lycée Louis Armand · Villefranche-sur-Saône (69400)
+                        </p>
+                        <p class="timeline-desc">
+                            Formation technique aux métiers des réseaux, des systèmes embarqués 
+                            et de l'informatique industrielle. Acquisition des bases en électronique, 
+                            programmation et administration réseau.
+                        </p>
+                        <div class="timeline-tags">
+                            <span>Réseaux</span>
+                            <span>Systèmes embarqués</span>
+                        </div>
                     </div>
-                    <p>.NET, WinForms, scripts d'automatisation, développement back-end</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>DATA & WEB</h3>
-                    <div class="skill-list">
-                        <span class="skill-pill">SQL</span>
-                        <span class="skill-pill">HTML/CSS</span>
-                    </div>
-                    <p>Requêtes complexes, optimisation, responsive design</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>INFRASTRUCTURE</h3>
-                    <div class="skill-list">
-                        <span class="skill-pill">TCP/IP</span>
-                        <span class="skill-pill">Routage</span>
-                        <span class="skill-pill">VLAN</span>
-                    </div>
-                    <p>Architecture réseau, sécurité, administration systèmes</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION PROJETS -->
-    <section class="projects" id="projects">
+    <!-- ========== SECTION AUTO-FORMATION ========== -->
+    <section class="self-learning" id="self-learning">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">>_ PROJECTS</span>
-                <h2 class="section-title">RÉALISATIONS <span class="title-accent">FLAGSHIP</span></h2>
+                <span class="section-tag">>_ SELF_LEARNING</span>
+                <h2 class="section-title">ENVIRONNEMENT <span class="title-accent">D'APPRENTISSAGE</span></h2>
             </div>
-            <div class="projects-grid">
-                <div class="project-card featured">
-                    <div class="project-status">// MAJOR_PROJECT</div>
-                    <div class="project-icon"><i class="fas fa-microchip"></i></div>
-                    <h3>OS 32-bit · GDT</h3>
-                    <p>Système d'exploitation minimal en 32 bits avec GDT. Bootloader, mode protégé, segmentation mémoire.</p>
-                    <div class="project-tech">
-                        <span>C</span>
-                        <span>ASM x86</span>
-                        <span>GDT</span>
+
+            <p class="learning-intro">
+                Autodidacte dans l'âme, j'ai développé mes compétences en <strong>C</strong> et en <strong>assembleur x86</strong> 
+                par moi-même. Voici les ressources qui constituent mon environnement d'apprentissage quotidien.
+            </p>
+
+            <div class="learning-grid">
+                <!-- Cours en ligne -->
+                <div class="learning-card">
+                    <div class="learning-icon">
+                        <i class="fas fa-laptop-code"></i>
                     </div>
-                    <a href="projets.html" class="project-link">>_ EXPLORER</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Site Hypnotérapeute</h3>
-                    <p>Site vitrine professionnel avec prise de RDV en ligne, formulaire de contact responsive.</p>
-                    <div class="project-tech">
-                        <span>PHP</span>
-                        <span>MySQL</span>
-                        <span>HTML/CSS</span>
+                    <h3>COURS EN LIGNE</h3>
+                    <p>Plateformes de formation structurées pour progresser à mon rythme.</p>
+                    <div class="learning-links">
+                        <a href="https://openclassrooms.com" target="_blank" class="learning-link">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>OpenClassrooms</span>
+                        </a>
+                        <a href="https://www.w3schools.com" target="_blank" class="learning-link">
+                            <i class="fas fa-code"></i>
+                            <span>W3Schools</span>
+                        </a>
                     </div>
-                    <a href="projets.html" class="project-link">>_ EXPLORER</a>
                 </div>
-                <div class="project-card">
-                    <div class="project-icon"><i class="fas fa-film"></i></div>
-                    <h3>Site + App Pathé Mâcon</h3>
-                    <p>Site web complet et application C# pour la gestion du cinéma (séances, réservations, stocks).</p>
-                    <div class="project-tech">
-                        <span>C#</span>
-                        <span>PHP</span>
-                        <span>SQL</span>
+
+                <!-- Livres -->
+                <div class="learning-card">
+                    <div class="learning-icon">
+                        <i class="fas fa-book"></i>
                     </div>
-                    <a href="projets.html" class="project-link">>_ EXPLORER</a>
+                    <h3>LIVRES TECHNIQUES</h3>
+                    <p>Ouvrages de référence pour comprendre en profondeur les systèmes et la sécurité.</p>
+                    <div class="learning-links">
+                        <!-- ============================================
+                             AJOUTER DES LIVRES
+                             Remplace "Livre 1" par le titre du livre
+                        ============================================= -->
+                        <div class="learning-link static">
+                            <i class="fas fa-book-open"></i>
+                            <span>Apprendre à programmer en C (Pour les nuls)</span>
+                        </div>
+                        <div class="learning-link static">
+                            <i class="fas fa-book-open"></i>
+                            <span>Techniques de Hacking - Jon Erickson </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center">
-                <a href="projets.html" class="btn btn-secondary">
-                    <span>VOIR TOUS LES PROJETS</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+
+                <!-- IA -->
+                <div class="learning-card ai-card">
+                    <div class="learning-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>INTELLIGENCE ARTIFICIELLE</h3>
+                    <p>Assistants IA pour m'accompagner dans l'apprentissage et la résolution de problèmes.</p>
+                    <div class="learning-links ai-links">
+                        <!-- ============================================
+                             LOGOS IA - EMPLACEMENT POUR LES LOGOS
+                             Remplace le # par l'URL du site
+                             Remplace le src de l'image par le chemin de ton logo
+                             Exemple : src="images/chatgpt-logo.png"
+                        ============================================= -->
+                        <a href="https://chat.openai.com" target="_blank" class="ai-link">
+                            <div class="ai-logo-placeholder">
+                                <!-- <img src="images/chatgpt-logo.png" alt="ChatGPT"> -->
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <span>ChatGPT</span>
+                        </a>
+                        <a href="https://www.deepseek.com" target="_blank" class="ai-link">
+                            <div class="ai-logo-placeholder">
+                                <!-- <img src="images/deepseek-logo.png" alt="DeepSeek"> -->
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <span>DeepSeek</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
                     <span class="glitch-small">&lt;G.L/&gt;</span>
                 </div>
-                <p class="footer-text">© 2025 GABIN LEFORESTIER · BTS SIO SLAM · DÉVELOPPEUR SYSTÈME</p>
+                <p class="footer-text">© 2025 GABIN LEFORESTIER · BTS SIO SLAM · DÉVELOPPEUR BAS NIVEAU & CRYPTOLOGIE</p>
                 <div class="footer-social">
                     <a href="#"><i class="fab fa-github"></i></a>
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -253,5 +338,23 @@
         </div>
     </footer>
 
+    <script>
+        const showCvBtn = document.getElementById('showCvBtn');
+        const closeCvBtn = document.getElementById('closeCvBtn');
+        const cvSection = document.getElementById('cvSection');
+
+        if (showCvBtn && closeCvBtn && cvSection) {
+            showCvBtn.addEventListener('click', function() {
+                cvSection.style.display = 'block';
+                setTimeout(() => {
+                    cvSection.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            });
+
+            closeCvBtn.addEventListener('click', function() {
+                cvSection.style.display = 'none';
+            });
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Contexte - Gabin LEFORESTIER | Portfolio BTS SIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Grille de fond statique -->
+    <div class="grid-bg"></div>
+
+    <!-- Barre de navigation -->
+    <nav>
+        <a href="index.html">ACCUEIL</a>
+        <a href="competence.html">COMPÉTENCES</a>
+        <a href="projets.html">PROJETS</a>
+        <div class="dropdown">
+            <a href="contexte.html" class="dropdown-toggle">CONTEXTE</a>
+            <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
+            <div class="dropdown-menu">
+                <a href="contexte.html#contexte-pro-1">
+                    <i class="fas fa-circle"></i> Contexte Pro 1 · 1ère année
+                </a>
+                <a href="contexte.html#contexte-pro-2">
+                    <i class="fas fa-circle"></i> Contexte Pro 2 · 2ème année
+                </a>
+                <a href="contexte.html#contexte-pro-3">
+                    <i class="fas fa-circle"></i> Contexte Pro 3 · Stage Avizeo
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== SECTION HERO CONTEXTE ========== -->
+    <section class="hero projets-hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-text">
+                    <i class="fas fa-diagram-project"></i> // CONTEXTES_PROFESSIONNELS
+                </span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">CONTEXTE</span>
+                <span class="title-line glitch-text">PROFESSIONNEL</span>
+            </h1>
+            <div class="hero-subtitle">
+                <div class="typewriter">
+                    <span class="static-text">Situations de travail en entreprise</span>
+                </div>
+                <p class="sub-badge">▸ STAGES & PROJETS</p>
+            </div>
+            <p class="hero-description">
+                [<span class="cmd">root@dev</span>:~<span class="cmd">$</span>] <span class="cmd-text">cat /contexte/*.log</span>
+            </p>
+            <div class="project-stats-hero">
+                <div class="hero-stat">
+                    <span class="hero-stat-number">3</span>
+                    <span class="hero-stat-label">CONTEXTES</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">5</span>
+                    <span class="hero-stat-label">PROJETS</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>// SCROLL_TO_EXPLORE</span>
+        </div>
+    </section>
+
+    <!-- ========== CONTEXTE PRO 1 (1ère année) ========== -->
+    <section class="contexte-section" id="contexte-pro-1">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ CONTEXTE_PRO_1</span>
+                <h2 class="section-title">1ÈRE <span class="title-accent">ANNÉE</span> · BTS SIO</h2>
+                <p class="section-subtitle">Année 2025 - 2026</p>
+            </div>
+
+            <!-- Projet réseau -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Projet Réseau · Active Directory & Debian</h3>
+                        <p class="contexte-type">Infrastructure · Virtualisation · Administration</p>
+                    </div>
+                    <div class="contexte-badge">RÉSEAU</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Description du projet</h4>
+                        <p>
+                            Mise en place d'une infrastructure réseau complète en environnement virtualisé. 
+                            Ce projet consistait à installer et configurer un <strong>contrôleur de domaine Active Directory</strong> 
+                            sous Windows Server, un <strong>serveur Debian</strong> et <strong>deux machines clientes</strong>, 
+                            afin de simuler un réseau d'entreprise fonctionnel.
+                        </p>
+                    </div>
+                    <div class="contexte-grid">
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-server"></i></div>
+                            <h5>Windows Server</h5>
+                            <p>Installation et configuration du contrôleur de domaine Active Directory</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fab fa-linux"></i></div>
+                            <h5>Serveur Debian</h5>
+                            <p>Mise en place d'un serveur Linux (DHCP, DNS, services réseau)</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-desktop"></i></div>
+                            <h5>2 Machines clientes</h5>
+                            <p>Intégration au domaine, tests de connexion et de partage</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-cube"></i></div>
+                            <h5>Virtualisation</h5>
+                            <p>Environnement complet déployé sur VMware / VirtualBox</p>
+                        </div>
+                    </div>
+                    <div class="contexte-competences">
+                        <h4><i class="fas fa-check-circle"></i> Compétences mobilisées</h4>
+                        <div class="contexte-tags">
+                            <span>Active Directory</span>
+                            <span>Windows Server</span>
+                            <span>Debian Linux</span>
+                            <span>DHCP</span>
+                            <span>DNS</span>
+                            <span>Virtualisation</span>
+                            <span>Administration réseau</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet développement -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Projet Développement · Application Cinéma Pathé Mâcon</h3>
+                        <p class="contexte-type">Développement C# · Site Web · Base de données</p>
+                    </div>
+                    <div class="contexte-badge dev-badge">DÉVELOPPEMENT</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Description du projet</h4>
+                        <p>
+                            Création d'une <strong>application de gestion complète en C#</strong> pour le cinéma Pathé de Mâcon, 
+                            accompagnée de son <strong>site web</strong> dédié à la gestion des films. Ce projet couvre l'ensemble 
+                            du cycle de développement : analyse des besoins, conception de la base de données, 
+                            développement de l'application et du site, puis déploiement.
+                        </p>
+                    </div>
+                    <div class="contexte-grid">
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fab fa-microsoft"></i></div>
+                            <h5>Application C#</h5>
+                            <p>Logiciel de gestion développé sous Visual Studio 2022 (.NET / WinForms)</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-globe"></i></div>
+                            <h5>Site Web</h5>
+                            <p>Plateforme web pour la gestion des films, séances et réservations</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-database"></i></div>
+                            <h5>Base de données</h5>
+                            <p>Conception et gestion d'une base SQL Server / MySQL</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-film"></i></div>
+                            <h5>Gestion cinéma</h5>
+                            <p>Films, séances, réservations, stocks et reporting</p>
+                        </div>
+                    </div>
+                    <div class="contexte-competences">
+                        <h4><i class="fas fa-check-circle"></i> Compétences mobilisées</h4>
+                        <div class="contexte-tags">
+                            <span>C# / .NET</span>
+                            <span>Visual Studio 2022</span>
+                            <span>SQL Server</span>
+                            <span>WinForms</span>
+                            <span>HTML / CSS / PHP</span>
+                            <span>MySQL</span>
+                            <span>Gestion de projet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTEXTE PRO 2 (2ème année) ========== -->
+    <section class="contexte-section" id="contexte-pro-2">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ CONTEXTE_PRO_2</span>
+                <h2 class="section-title">2ÈME <span class="title-accent">ANNÉE</span> · BTS SIO</h2>
+                <p class="section-subtitle">Année 2026 - 2027</p>
+            </div>
+
+            <div class="contexte-card empty-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Contexte professionnel · 2ème année</h3>
+                        <p class="contexte-type">En cours de construction...</p>
+                    </div>
+                    <div class="contexte-badge">À VENIR</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Informations à venir</h4>
+                        <p>
+                            Cette section sera complétée avec les projets professionnels réalisés 
+                            durant la deuxième année de BTS SIO. Elle accueillera les nouveaux 
+                            contextes de stage et projets PPE.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTEXTE PRO 3 (Stage Avizeo) ========== -->
+    <section class="contexte-section" id="contexte-pro-3">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ CONTEXTE_PRO_3</span>
+                <h2 class="section-title">STAGE · <span class="title-accent">AVIZEO</span></h2>
+                <p class="section-subtitle">1ère année · Villefranche-sur-Saône</p>
+            </div>
+
+            <!-- Carte principale du stage -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Stage · Service Informatique</h3>
+                        <p class="contexte-type">Avizeo · Villefranche-sur-Saône (69400)</p>
+                    </div>
+                    <div class="contexte-badge">STAGE 1ÈRE ANNÉE</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Présentation du stage</h4>
+                        <p>
+                            Stage effectué au sein du <strong>service informatique d'Avizeo</strong> à Villefranche-sur-Saône. 
+                            Missions variées autour de la <strong>migration de données</strong>, du <strong>développement de scripts Python</strong> 
+                            et de l'<strong>automatisation de tâches</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 1 : Migration PennyLane -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Migration de données · Quadra → PennyLane</h3>
+                        <p class="contexte-type">Gestion de données · Migration</p>
+                    </div>
+                    <div class="contexte-badge dev-badge">DONNÉES</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Description</h4>
+                        <p>
+                            Suite aux migrations de données de <strong>Quadra vers PennyLane</strong>, j'ai participé à la mise à jour 
+                            des informations clients. Le travail consistait à modifier les données des entreprises clientes 
+                            (nom d'entreprise, capital social, etc.) en effectuant la conversion du <strong>numéro de SIRET en SIREN</strong>.
+                        </p>
+                    </div>
+                    <div class="contexte-grid">
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-database"></i></div>
+                            <h5>Migration BDD</h5>
+                            <p>Transfert des données de Quadra vers PennyLane</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-id-card"></i></div>
+                            <h5>SIRET → SIREN</h5>
+                            <p>Conversion des identifiants d'entreprises</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-building"></i></div>
+                            <h5>Mise à jour clients</h5>
+                            <p>Nom d'entreprise, capital, coordonnées</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-check-double"></i></div>
+                            <h5>Vérification</h5>
+                            <p>Contrôle de cohérence des données migrées</p>
+                        </div>
+                    </div>
+                    <div class="contexte-competences">
+                        <h4><i class="fas fa-check-circle"></i> Compétences mobilisées</h4>
+                        <div class="contexte-tags">
+                            <span>Gestion de données</span>
+                            <span>Migration</span>
+                            <span>SIRET / SIREN</span>
+                            <span>PennyLane</span>
+                            <span>Quadra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 2 : Scripts Python -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Développement · Scripts Python</h3>
+                        <p class="contexte-type">Automatisation · Optimisation système</p>
+                    </div>
+                    <div class="contexte-badge dev-badge">DÉVELOPPEMENT</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Description</h4>
+                        <p>
+                            Sur demande, création de <strong>scripts Python</strong> destinés aux ordinateurs lents de l'entreprise. 
+                            Ces scripts permettent d'automatiser des tâches répétitives et d'optimiser les performances 
+                            des postes de travail.
+                        </p>
+                    </div>
+                    <div class="contexte-grid">
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fab fa-python"></i></div>
+                            <h5>Python</h5>
+                            <p>Développement de scripts d'automatisation</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            <h5>Optimisation</h5>
+                            <p>Amélioration des performances des PC lents</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-robot"></i></div>
+                            <h5>Automatisation</h5>
+                            <p>Réduction des tâches manuelles répétitives</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-vial"></i></div>
+                            <h5>Tests & Déploiement</h5>
+                            <p>Validation et mise en production des scripts</p>
+                        </div>
+                    </div>
+                    <div class="contexte-competences">
+                        <h4><i class="fas fa-check-circle"></i> Compétences mobilisées</h4>
+                        <div class="contexte-tags">
+                            <span>Python</span>
+                            <span>Scripting</span>
+                            <span>Automatisation</span>
+                            <span>Optimisation</span>
+                            <span>Test & Déploiement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 3 : Compétences acquises -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Acquisition de compétences</h3>
+                        <p class="contexte-type">Savoir-faire techniques & méthodologiques</p>
+                    </div>
+                    <div class="contexte-badge">COMPÉTENCES</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Compétences développées</h4>
+                        <p>
+                            Ce stage m'a permis d'acquérir et de renforcer de nombreuses compétences techniques 
+                            et méthodologiques essentielles au métier de développeur / technicien informatique.
+                        </p>
+                    </div>
+                    <div class="contexte-grid">
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-search"></i></div>
+                            <h5>Recherche de fonctions</h5>
+                            <p>Exploration de documentation et API pour trouver les bonnes solutions</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-user-cog"></i></div>
+                            <h5>Autonomie</h5>
+                            <p>Gestion indépendante des tâches et prise d'initiative</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-vial"></i></div>
+                            <h5>Test & Déploiement</h5>
+                            <p>Validation des développements et mise en production</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-certificate"></i></div>
+                            <h5>Certificat auto-signé</h5>
+                            <p>Création de certificats avec PowerShell</p>
+                        </div>
+                    </div>
+                    <div class="contexte-competences">
+                        <h4><i class="fas fa-check-circle"></i> Compétences transverses</h4>
+                        <div class="contexte-tags">
+                            <span>Recherche</span>
+                            <span>Autonomie</span>
+                            <span>Test & Déploiement</span>
+                            <span>PowerShell</span>
+                            <span>Certificats</span>
+                            <span>Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission 4 : Excel & Plan comptable -->
+            <div class="contexte-card">
+                <div class="contexte-header">
+                    <div class="contexte-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <div class="contexte-title-block">
+                        <h3>Tâche sur Excel · Plan comptable</h3>
+                        <p class="contexte-type">Automatisation · Traitement de données</p>
+                    </div>
+                    <div class="contexte-badge dev-badge">BUREAUTIQUE</div>
+                </div>
+                <div class="contexte-body">
+                    <div class="contexte-description">
+                        <h4><i class="fas fa-info-circle"></i> Description</h4>
+                        <p>
+                            Paramétrage d'un <strong>plan comptable</strong> sur Excel. Le travail consistait à récupérer 
+                            les données saisies dans un fichier, puis à les réinjecter dans un fichier reprenant 
+                            toutes les données, pour enfin les intégrer dans un <strong>fichier d'automatisation 
+                            d'écriture comptable</strong>.
+                        </p>
+                        <p>
+                            Le plan comptable a été effectué pour <strong>tous les jours du mois de mai 2026 
+                            au mois de décembre 2026</strong>.
+                        </p>
+                    </div>
+                    <div class="contexte-grid">
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-file-excel"></i></div>
+                            <h5>Excel</h5>
+                            <p>Paramétrage et manipulation de fichiers Excel</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-calculator"></i></div>
+                            <h5>Plan comptable</h5>
+                            <p>Structuration des données comptables</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-sync"></i></div>
+                            <h5>Consolidation</h5>
+                            <p>Récupération et fusion des données saisies</p>
+                        </div>
+                        <div class="contexte-detail">
+                            <div class="detail-icon"><i class="fas fa-magic"></i></div>
+                            <h5>Automatisation</h5>
+                            <p>Génération automatique d'écritures comptables</p>
+                        </div>
+                    </div>
+                    <div class="contexte-competences">
+                        <h4><i class="fas fa-check-circle"></i> Compétences mobilisées</h4>
+                        <div class="contexte-tags">
+                            <span>Excel</span>
+                            <span>Plan comptable</span>
+                            <span>Traitement de données</span>
+                            <span>Automatisation</span>
+                            <span>Rigueur</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="glitch-small">&lt;G.L/&gt;</span>
+                </div>
+                <p class="footer-text">© 2025 GABIN LEFORESTIER · BTS SIO SLAM · DÉVELOPPEUR BAS NIVEAU & CRYPTOLOGIE</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
