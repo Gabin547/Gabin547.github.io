@@ -25,20 +25,14 @@
             <a href="contexte.html" class="dropdown-toggle">CONTEXTE</a>
             <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
             <div class="dropdown-menu">
-                <a href="contexte.html#contexte-pro-1">
-                    <i class="fas fa-circle"></i> Contexte Pro 1 · 1ère année
-                </a>
-                <a href="contexte.html#contexte-pro-2">
-                    <i class="fas fa-circle"></i> Contexte Pro 2 · 2ème année
-                </a>
-                <a href="contexte.html#contexte-pro-3">
-                    <i class="fas fa-circle"></i> Contexte Pro 3 · Stage Avizeo
-                </a>
+                <a href="contexte.html#contexte-pro-1"><i class="fas fa-circle"></i> Contexte Pro 1</a>
+                <a href="contexte.html#contexte-pro-2"><i class="fas fa-circle"></i> Contexte Pro 2</a>
+                <a href="contexte.html#contexte-pro-3"><i class="fas fa-circle"></i> Contexte Pro 3</a>
             </div>
         </div>
     </nav>
 
-    <!-- ========== SECTION HERO VEILLE ========== -->
+    <!-- ========== SECTION HERO ========== -->
     <section class="hero projets-hero">
         <div class="hero-content">
             <div class="hero-badge">
@@ -48,13 +42,13 @@
             </div>
             <h1 class="hero-title">
                 <span class="title-line">VEILLE</span>
-                <span class="title-line glitch-text">TECHNOLOGIQUE</span>
+                <span class="title-line glitch-text">SYSTÈME</span>
             </h1>
             <div class="hero-subtitle">
                 <div class="typewriter">
                     <span class="static-text">Développement Bas Niveau & OS</span>
                 </div>
-                <p class="sub-badge">▸ SUJET : XOSIA OS</p>
+                <p class="sub-badge">▸ PROJET FIL ROUGE : XOSIA OS</p>
             </div>
             <p class="hero-description">
                 [<span class="cmd">root@dev</span>:~<span class="cmd">$</span>] <span class="cmd-text">cat /veille/os_dev.md</span>
@@ -66,15 +60,14 @@
         </div>
     </section>
 
-    <!-- ========== SECTION VEILLE ========== -->
+    <!-- ========== SECTION INTRODUCTION ========== -->
     <section class="projects-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">>_ VEILLE.SUJET</span>
-                <h2 class="section-title">SUJET & <span class="title-accent">PROBLÉMATIQUE</span></h2>
+                <span class="section-tag">>_ INTRODUCTION</span>
+                <h2 class="section-title">LE SUJET & <span class="title-accent">LA PROBLÉMATIQUE</span></h2>
             </div>
 
-            <!-- Carte de présentation du sujet -->
             <div class="project-major">
                 <div class="project-major-badge">SUJET DE VEILLE</div>
                 <div class="project-major-content">
@@ -82,128 +75,204 @@
                         <i class="fas fa-microchip"></i>
                     </div>
                     <div class="project-major-info">
-                        <h3>Le Développement d'OS & le Bas Niveau</h3>
+                        <h3>XOSIA OS · Comprendre les entrailles du numérique</h3>
                         <p class="project-major-desc">
-                            Comment fonctionne un système d'exploitation moderne ? Quelles sont les technologies 
-                            et les langages utilisés pour concevoir les couches basses de l'informatique ? 
-                            Cette veille s'articule autour de mon projet <strong>XOSIA OS</strong>, un OS 32-bit 
-                            développé de A à Z, et des technologies qui gravitent autour du développement système.
+                            Pour ma veille technologique, j'ai choisi de m'attaquer à un domaine que très peu d'étudiants 
+                            explorent : le <strong>développement bas niveau et la conception de systèmes d'exploitation</strong>. 
+                            À travers la création de <strong>XOSIA OS</strong> (un OS 32 bits), je documente comment un ordinateur 
+                            passe du mode réel au mode protégé, comment il gère la mémoire, et comment il communique 
+                            avec le matériel (interruptions, timer). 
                         </p>
                         <div class="project-major-tech">
-                            <span>Assembleur</span>
-                            <span>C / Rust</span>
-                            <span>Kernel</span>
-                            <span>Cybersécurité</span>
+                            <span>C</span>
+                            <span>Assembleur x86</span>
+                            <span>Multiboot / GRUB</span>
+                            <span>IDT / PIC</span>
+                            <span>QEMU</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="section-header" style="margin-top: 4rem;">
-                <span class="section-tag">>_ VEILLE.AXES</span>
-                <h2 class="section-title">AXES DE <span class="title-accent">RECHERCHE</span></h2>
+    <!-- ========== SECTION 1 : LE DÉMARRAGE (MULTIBOOT & GRUB) ========== -->
+    <section class="projects-section" style="background: linear-gradient(180deg, transparent, rgba(10, 255, 183, 0.02));">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ PHASE_01</span>
+                <h2 class="section-title">LE <span class="title-accent">DÉMARRAGE (GRUB)</span></h2>
             </div>
 
-            <!-- Grille des axes de veille -->
-            <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-card-header">
+                    <div class="project-icon-large"><i class="fas fa-power-off"></i></div>
+                    <div class="project-badge">MULTIBOOT</div>
+                </div>
+                <h3>Le passage de relais par GRUB</h3>
+                <p>
+                    Contrairement à un bootloader "maison", j'ai choisi d'utiliser <strong>GRUB</strong> avec la spécification 
+                    <strong>Multiboot</strong>. C'est GRUB qui s'occupe de passer le processeur en mode 32 bits et de charger 
+                    mon noyau en mémoire. Pour que GRUB me reconnaisse, mon fichier <code>kernel_entry.asm</code> doit 
+                    contenir un en-tête magique (le nombre <code>0x1BADB002</code>).
+                </p>
                 
-                <!-- Axe 1 -->
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <div class="project-icon-large">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="project-badge">LANGAGES</div>
-                    </div>
-                    <h3>Langages Bas Niveau</h3>
-                    <p>Évolution du C et de l'assembleur. L'émergence du <strong>Rust</strong> dans le noyau Linux et le développement système sécurisé.</p>
-                    <div class="project-tech-list">
-                        <span>C</span>
-                        <span>ASM x86</span>
-                        <span>Rust</span>
-                    </div>
+                <!-- CAPTURE 1 : kernel_entry.asm -->
+                <div class="project-image-placeholder">
+                    <img src="images/code_kernel_entry_asm.png" alt="Code Assembleur Multiboot">
                 </div>
 
-                <!-- Axe 2 -->
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <div class="project-icon-large">
-                            <i class="fas fa-shield-halved"></i>
-                        </div>
-                        <div class="project-badge">SÉCURITÉ</div>
-                    </div>
-                    <h3>Sécurité Kernel</h3>
-                    <p>Protection de la mémoire, isolation des processus, failles kernel (rootkits, exploits) et cryptographie matérielle.</p>
-                    <div class="project-tech-list">
-                        <span>Memory Protection</span>
-                        <span>Cryptographie</span>
-                        <span>Rootkits</span>
-                    </div>
-                </div>
-
-                <!-- Axe 3 -->
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <div class="project-icon-large">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <div class="project-badge">ARCHITECTURE</div>
-                    </div>
-                    <h3>OS & Systèmes Embarqués</h3>
-                    <p>Conception de noyaux (monolithique, micro-kernel), RTOS pour l'IoT, et architecture des processeurs modernes.</p>
-                    <div class="project-tech-list">
-                        <span>Kernel Design</span>
-                        <span>RTOS</span>
-                        <span>IoT</span>
-                    </div>
+                <div class="project-tech-list" style="margin-top: 1.5rem;">
+                    <span>ASM x86</span>
+                    <span>Multiboot</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Sources -->
-            <div class="section-header" style="margin-top: 4rem;">
-                <span class="section-tag">>_ VEILLE.SOURCES</span>
+    <!-- ========== SECTION 2 : LE KERNEL (C) ========== -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ PHASE_02</span>
+                <h2 class="section-title">LE <span class="title-accent">NOYAU (KERNEL)</span></h2>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    <div class="project-icon-large"><i class="fas fa-c"></i></div>
+                    <div class="project-badge">LANGAGE C</div>
+                </div>
+                <h3>L'affichage en mémoire vidéo</h3>
+                <p>
+                    Une fois que GRUB a fait son travail, on passe le relais à un code écrit en <strong>C</strong>. 
+                    La première chose à faire est d'afficher un message à l'écran en écrivant directement dans la 
+                    mémoire vidéo (VGA) à l'adresse <code>0xB8000</code>. Chaque caractère occupe 2 octets 
+                    (1 pour la lettre, 1 pour la couleur).
+                </p>
+
+                <!-- CAPTURE 2 : kernel.c -->
+                <div class="project-image-placeholder">
+                    <img src="images/kernel_c_code.png" alt="Code C du kernel">
+                </div>
+
+                <!-- CAPTURE 3 : QEMU Welcome -->
+                <div class="project-image-placeholder" style="margin-top: 1.5rem;">
+                    <img src="images/qemu_affichage.png" alt="Résultat QEMU Welcome">
+                </div>
+
+                <div class="project-tech-list" style="margin-top: 1.5rem;">
+                    <span>C</span>
+                    <span>VGA Memory</span>
+                    <span>0xB8000</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3 : LES INTERRUPTIONS ========== -->
+    <section class="projects-section" style="background: linear-gradient(180deg, transparent, rgba(255, 42, 109, 0.02));">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ PHASE_03</span>
+                <h2 class="section-title">LES <span class="title-accent">INTERRUPTIONS</span></h2>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    <div class="project-icon-large"><i class="fas fa-bolt"></i></div>
+                    <div class="project-badge">IDT & PIC</div>
+                </div>
+                <h3>Écouter le matériel (IDT & PIC)</h3>
+                <p>
+                    Un OS sans interruptions est un OS sourd. J'ai implémenté l'<strong>IDT</strong> (Interrupt Descriptor Table) 
+                    pour gérer les exceptions du processeur (comme la division par zéro). J'ai également dû configurer le 
+                    <strong>PIC</strong> (Programmable Interrupt Controller) pour décaler les interruptions matérielles 
+                    à partir de l'entrée 32, afin d'éviter les conflits.
+                </p>
+
+                <!-- CAPTURE 4 : idt.asm -->
+                <div class="project-image-placeholder">
+                    <img src="images/codeidtasm.png" alt="Code Assembleur de l'IDT">
+                </div>
+
+                <!-- CAPTURE 5 : Interruption capturée -->
+                <div class="project-image-placeholder" style="margin-top: 1.5rem;">
+                    <img src="images/interruptioncapture.png" alt="Résultat QEMU - Interruption capturée">
+                </div>
+
+                <div class="project-tech-list" style="margin-top: 1.5rem;">
+                    <span>IDT</span>
+                    <span>PIC</span>
+                    <span>Handlers ASM/C</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 4 : LE TIMER (PIT) ========== -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ PHASE_04</span>
+                <h2 class="section-title">LE <span class="title-accent">TEMPS RÉEL</span></h2>
+            </div>
+
+            <div class="project-card">
+                <div class="project-card-header">
+                    <div class="project-icon-large"><i class="fas fa-clock"></i></div>
+                    <div class="project-badge">TIMER (PIT)</div>
+                </div>
+                <h3>Le battement de cœur du système</h3>
+                <p>
+                    Le Timer (PIT - Programmable Interval Timer) est essentiel. Configuré pour envoyer une interruption 
+                    régulière au processeur (IRQ 0), il permet à l'OS de créer une notion de temps. 
+                    Cette phase m'a permis de comprendre comment le matériel communique en continu avec le noyau.
+                </p>
+
+                <!-- CAPTURE 6 : timer.c -->
+                <div class="project-image-placeholder">
+                    <img src="images/timercode.png" alt="Code C du timer">
+                </div>
+
+                <div class="project-tech-list" style="margin-top: 1.5rem;">
+                    <span>PIT (Timer)</span>
+                    <span>IRQ 0</span>
+                    <span>EOI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5 : SOURCES ========== -->
+    <section class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">>_ VEILLE_SOURCES</span>
                 <h2 class="section-title">MES <span class="title-accent">SOURCES</span></h2>
             </div>
 
-            <div class="learning-grid">
-                <!-- Cours en ligne / Docs -->
+            <div class="learning-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
                 <div class="learning-card">
-                    <div class="learning-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>DOCUMENTATION</h3>
-                    <p>Références techniques et tutoriels.</p>
-                    <div class="learning-links">
+                    <div class="learning-icon"><i class="fas fa-book"></i></div>
+                    <h3>DOCUMENTATION & RÉFÉRENCES</h3>
+                    <p>Les sites techniques et documentations officielles qui m'ont servi pour comprendre le développement bas niveau.</p>
+                    <div class="learning-links" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem;">
                         <a href="https://wiki.osdev.org/" target="_blank" class="learning-link">
                             <i class="fas fa-globe"></i> <span>OSDev Wiki</span>
                         </a>
                         <a href="https://www.kernel.org/doc/html/latest/" target="_blank" class="learning-link">
                             <i class="fab fa-linux"></i> <span>Linux Kernel Docs</span>
                         </a>
+                        <a href="https://intermezzos.github.io/book/" target="_blank" class="learning-link">
+                            <i class="fas fa-book-open"></i> <span>IntermezzOS Book</span>
+                        </a>
                         <a href="https://doc.rust-lang.org/book/" target="_blank" class="learning-link">
                             <i class="fas fa-cog"></i> <span>The Rust Book</span>
                         </a>
                     </div>
                 </div>
-
-                <!-- Blogs / Actualités -->
-                <div class="learning-card">
-                    <div class="learning-icon">
-                        <i class="fas fa-newspaper"></i>
-                    </div>
-                    <h3>ACTUALITÉS</h3>
-                    <p>Blogs et sites d'information technique.</p>
-                    <div class="learning-links">
-                        <a href="https://lwn.net/" target="_blank" class="learning-link">
-                            <i class="fas fa-terminal"></i> <span>LWN.net</span>
-                        </a>
-                        <a href="https://www.phoronix.com/" target="_blank" class="learning-link">
-                            <i class="fas fa-chart-line"></i> <span>Phoronix</span>
-                        </a>
-                    </div>
-                </div>
             </div>
-
         </div>
     </section>
 
