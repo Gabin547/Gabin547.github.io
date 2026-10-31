@@ -20,6 +20,7 @@
         <a href="index.html">ACCUEIL</a>
         <a href="competence.html">COMPÉTENCES</a>
         <a href="projets.html">PROJETS</a>
+        <a href="veille.html">VEILLE</a> <!-- NOUVEL ONGLET -->
         <div class="dropdown">
             <a href="contexte.html" class="dropdown-toggle">CONTEXTE</a>
             <span class="dropdown-arrow"><i class="fas fa-chevron-down"></i></span>
@@ -85,24 +86,23 @@
 
             <!-- PROJET MAJEUR -->
             <div class="project-major">
-                <div class="project-major-badge">PROJET MAJEUR</div>
+                <div class="project-major-badge">PROJET MAJEUR · VEILLE</div>
                 <div class="project-major-content">
                     <div class="project-major-icon">
                         <i class="fas fa-microchip"></i>
                     </div>
                     <div class="project-major-info">
-                        <h3>OS 32-bit · GDT</h3>
+                        <h3>XOSIA OS · 32-bit</h3>
                         <p class="project-major-desc">
-                            Système d'exploitation minimal en 32 bits avec implémentation complète de la GDT 
-                            (Global Descriptor Table). Développé en assembleur et C, gestion du mode protégé, 
-                            segmentation mémoire et affichage texte. Ce projet représente l'aboutissement de mon 
-                            apprentissage autodidacte des langages bas niveau et de l'architecture système.
+                            Système d'exploitation minimal en 32 bits avec implémentation de la GDT, de l'IDT, 
+                            du PIC et d'un Timer (PIT). Développé en assembleur et C, il gère les interruptions 
+                            matérielles et le temps réel. <strong>Ce projet est également le sujet de ma veille technologique.</strong>
                         </p>
                         <div class="project-major-tech">
                             <span>C</span>
                             <span>Assembleur x86</span>
-                            <span>GDT</span>
-                            <span>Mode protégé</span>
+                            <span>GDT / IDT</span>
+                            <span>PIC</span>
                             <span>QEMU</span>
                         </div>
                     </div>
