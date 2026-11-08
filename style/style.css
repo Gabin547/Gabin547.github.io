@@ -2034,54 +2034,221 @@ nav > a:hover {
     }
 }
 
+
 /* ============================================================
-   VEILLE - IMAGES & PLACEHOLDERS
+   VEILLE - REVUE DE PRESSE (16 ARTICLES)
 ============================================================ */
 
-.project-image-placeholder {
+/* GRILLE DES ARTICLES */
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
     width: 100%;
-    margin: 1.5rem 0;
-    border: 1px solid var(--border-med);
-    border-radius: 4px;
-    overflow: hidden;
-    background: rgba(0, 0, 0, 0.5);
+}
+
+/* CARTES DES ARTICLES */
+.veille-card {
     position: relative;
-    /* Optionnel : ajoute une petite lueur pour le style futuriste */
-    box-shadow: 0 0 15px rgba(10, 255, 183, 0.05);
-}
-
-/* L'image réelle (quand tu décommenteras la balise <img>) */
-.project-image-placeholder img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.project-image-placeholder:hover img {
-    transform: scale(1.02); /* Petit effet de zoom au survol */
-}
-
-/* Le placeholder (quand il n'y a pas d'image) */
-.placeholder-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    padding: 4rem 2rem;
-    color: var(--text-dim);
-    font-family: monospace;
-    font-size: 0.85rem;
-    border: 1px dashed var(--border-soft);
-    background: rgba(10, 255, 183, 0.02);
-    text-align: center;
+    overflow: hidden;
+
+    background: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 4px;
+
+    padding: 1.5rem;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
-.placeholder-content i {
-    font-size: 3rem;
-    color: var(--primary);
+/* BARRE LATERALE TURQUOISE */
+.veille-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: linear-gradient(
+        180deg,
+        var(--primary),
+        var(--secondary)
+    );
+
     opacity: 0.5;
-    animation: iconPulse 2s ease infinite;
+    transition: opacity 0.3s ease;
+}
+
+/* EFFET AU SURVOL */
+.veille-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-5px);
+    box-shadow: var(--glow-primary);
+}
+
+.veille-card:hover::before {
+    opacity: 1;
+}
+
+/* ICONE */
+.veille-card .project-icon-large {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+}
+
+/* TITRE */
+.veille-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    color: #ffffff;
+
+    margin-bottom: 0.8rem;
+}
+
+/* INFORMATIONS DE L'ARTICLE */
+.veille-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+
+    margin-bottom: 1rem;
+
+    font-family: monospace;
+    font-size: 0.65rem;
+    color: var(--text-dim);
+}
+
+/* BADGE DE CATEGORIE */
+.veille-badge {
+    display: inline-block;
+
+    padding: 0.2rem 0.6rem;
+
+    border: 1px solid var(--primary);
+    border-radius: 2px;
+
+    color: var(--primary);
+    background: rgba(10, 255, 183, 0.05);
+
+    letter-spacing: 1px;
+}
+
+/* RESUME DE L'ARTICLE */
+.veille-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+
+    color: var(--text-soft);
+
+    margin-bottom: 1.2rem;
+
+    flex-grow: 1;
+}
+
+/* BLOC MON ANALYSE */
+.veille-analysis {
+    background: rgba(10, 255, 183, 0.05);
+
+    border-left: 2px solid var(--primary);
+    border-radius: 0 4px 4px 0;
+
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    color: var(--text-soft);
+}
+
+/* TITRE DE L'ANALYSE */
+.veille-analysis strong {
+    display: block;
+
+    margin-bottom: 0.3rem;
+
+    color: var(--primary);
+
+    font-family: monospace;
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* LIEN VERS LA SOURCE */
+.veille-link {
+    display: inline-block;
+
+    margin-top: auto;
+
+    color: var(--primary);
+
+    font-family: monospace;
+    font-size: 0.75rem;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease,
+                letter-spacing 0.3s ease,
+                text-shadow 0.3s ease;
+}
+
+/* SURVOL DU LIEN */
+.veille-link:hover {
+    color: var(--secondary);
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px var(--secondary);
+}
+
+/* ============================================================
+   RESPONSIVE - VEILLE
+============================================================ */
+
+@media screen and (max-width: 768px) {
+
+    .veille-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .veille-card {
+        padding: 1.2rem;
+    }
+
+    .veille-card h3 {
+        font-size: 1rem;
+    }
+
+    .veille-card p {
+        font-size: 0.85rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .veille-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .veille-card {
+        padding: 1rem;
+    }
+
+    .veille-meta {
+        gap: 0.5rem;
+    }
+
 }
